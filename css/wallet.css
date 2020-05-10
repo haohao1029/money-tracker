@@ -1,0 +1,489 @@
+[class^="col"] {
+    padding: 0;
+}
+
+.user-wallet, .family-wallet {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+    padding: 0;
+    padding-bottom: 8px;
+    background-color: #fff;
+}
+
+.user-wallet {
+    margin-bottom: 20px;
+}
+
+#content {
+    font-size: 14px;
+}
+
+.card--header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 0;
+    background-color: var(--colorMain);
+    color: #fff;
+    position: relative;
+    font-family: 'Gotham Medium';
+    font-size: 16px;
+}
+
+.btn-add {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-family: 'Gotham Light';
+    padding: 5px 8px;
+    overflow: hidden;
+    border-top-right-radius: 9px;
+}
+
+.btn-add:focus {
+    outline: none;
+}
+
+.card--header i {
+    margin-right: 4px;
+}
+
+.table-head {
+    position: relative;
+    padding: 0 4%;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.table-head::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.head-cell {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.head-cell:last-child {
+    justify-content: flex-end;
+}
+
+.wallet-user-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wallet-item {
+    padding: 5px 4% 5px 4.5%;
+    transition: background-color .2s;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.wallet-item:active {
+    background-color: rgba(0, 0, 0, .15);
+}
+
+.wallet-item i {
+    transition: transform .3s;
+}
+
+.wallet-item i.active {
+    transform: rotate(180deg);
+}
+
+.wallet-balance {
+    text-align: right;
+}
+
+.show-detail, .family-wallet .wallet-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wallet-detail {
+    width: 100%;
+}
+
+.detail-wrapper {
+    padding: 5px 6%;
+}
+
+.button-wrapper {
+    padding: 5px 6%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-delete, .btn-edit, .btn-add-plan, .btn-transfer {
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0 5px;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.btn-edit i, .btn-delete i, .btn-add-plan i, .btn-transfer i {
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+.btn-edit *, .btn-delete *, .btn-add-plan *, .btn-transfer * {
+    z-index: 1;
+}
+
+.btn-edit .clicked, .btn-delete .clicked, .btn-add-plan .clicked, .btn-transfer .clicked {
+    z-index: 0;
+}
+
+.btn-delete {
+    background-color: var(--colorFail);
+}
+
+.btn-edit {
+    background-color: #fdb827;
+}
+
+.btn-add-plan {
+    background-color: var(--colorMain);
+}
+
+.btn-transfer {
+    background-color: var(--colorSuccess);
+}
+
+.user-wallet .btn-add-plan, .family-wallet .btn-transfer {
+    margin-right: 0;
+}
+
+/* plan item */
+
+.empty-plan {
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .7;
+}
+
+.plan-item {
+    overflow: hidden;
+    padding: 5px 2px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    cursor: pointer;
+    transition: background-color .2s;
+}
+
+.plan-item:active {
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.plan-item:first-child {
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+.plan-item .clicked {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, .15);
+}
+
+.plan-item [class*="col-"] {
+    padding: 0;
+}
+
+.plan-name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.spent span {
+    text-align: right;
+}
+
+/* modal styling */
+
+/* add wallet */
+
+.auto-height .modal-dialog {
+    height: auto;
+}
+
+form .row, form.row {
+    margin: 25px 0;
+    position: relative;
+}
+
+.new-balance.row, .form-wallet.row {
+    margin-bottom: 15px;
+}
+
+.input-title {
+    padding: 0;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    line-height: 33px;
+}
+
+.form-input {
+    padding: 3px 5px;
+    border: none;
+    border-bottom: 2px solid var(--colorMain);
+}
+
+.form-input:focus {
+    outline: none;
+}
+
+.input-amount {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.input-amount span {
+    font-weight: 700;
+    padding: 0;
+}
+
+#modal-delete-wallet, #modal-budget-existed {
+    font-family: 'Roboto';
+}
+
+#modal-delete-wallet .modal-body, #modal-budget-existed .modal-body {
+    font-size: 16px;
+    padding: 1rem;
+}
+
+#modal-delete-wallet .modal-header, #modal-budget-existed .modal-body {
+    padding: .6rem .8rem;
+}
+
+#modal-delete-wallet .modal-footer, #modal-budget-existed .modal-footer {
+    padding: .5rem .8rem;
+}
+
+#modal-delete-wallet button, #modal-budget-existed button {
+    font-size: 18px;
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+}
+
+.modal-custom-footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 16px;
+}
+
+select.form-input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid var(--colorMain);
+}
+
+select.form-input:focus {
+    outline: none;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tooltip-inner {
+    text-align: left;
+    max-width: 250px;
+}
+
+input {
+    transition: opacity .2s, border-bottom-color .2s;
+}
+
+input:disabled {
+    border-bottom-color: rgba(0, 0, 0, .2);
+    background: none;
+    opacity: .5;
+}
+
+input:disabled~span {
+    opacity: .5;
+}
+
+/* modal budget existed */
+
+#btn-delete-budget {
+    position: absolute;
+    right: .7rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    background: none;
+}
+
+#btn-delete-budget:active {
+    color: #f00;
+}
+
+#btn-delete-budget:focus {
+    outline: none;
+}
+
+#btn-edit-budget {
+    color: #fff;
+}
+
+.family-wallet .wallet-item>* {
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* modal-transfer */
+
+#switch {
+    display: none;
+}
+
+#lbl-switch {
+    cursor: pointer;
+    background-color: var(--colorSuccess);
+    position: relative;
+    height: 30px;
+    width: 100%;
+    margin: 0;
+    border-radius: 16px;
+    transition: background-color .3s;
+}
+
+#lbl-switch::before {
+    content: '';
+    position: absolute;
+    border-radius: 12px;
+    background-color: #fff;
+    height: 24px;
+    width: 24px;
+    top: 3px;
+    left: 3px;
+    transition: .3s;
+}
+
+#switch:checked+#lbl-switch {
+    background-color: var(--colorFail);
+}
+
+#switch:checked+#lbl-switch::before {
+    left: calc(100% - 3px);
+    transform: translateX(-100%);
+}
+
+#lbl-switch:active::before {
+    width: 36px;
+}
+
+.transfer-mode .label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.wrapper-switch {
+    margin: 0 10px;
+    padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+    #content {
+        font-size: 16px;
+    }
+    #modal-add-fam-wallet .modal-title {
+        font-size: 26px;
+    }
+    .card--header {
+        font-size: 24px;
+    }
+    #new-wallet, #new-family-wallet {
+        font-size: 16px;
+        transition: background-color .2s;
+    }
+    #new-wallet:hover, #new-family-wallet:hover {
+        background-color: rgba(0, 0, 0, .1);
+    }
+    .head-cell {
+        font-size: 18px;
+    }
+    .wallet-item {
+        padding: 10px 5% 10px 4%;
+    }
+    .wallet-item:hover {
+        background-color: rgba(0, 0, 0, .15);
+    }
+    .detail-wrapper {
+        padding: 5px 7%;
+    }
+    .plan-item {
+        padding: 8px;
+    }
+    .plan-item:hover {
+        background-color: rgba(0, 0, 0, .1);
+    }
+    .button-wrapper {
+        padding: 5px 7.5%;
+    }
+    .btn-delete, .btn-edit, .btn-add-plan {
+        padding: 5px 10px;
+        border-radius: 5px;
+        margin: 0 5px;
+        font-size: 14px;
+    }
+    .btn-edit i, .btn-delete i, .btn-add-plan i {
+        margin-right: 5px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    #modal-delete-wallet .modal-dialog, #modal-budget-existed .modal-dialog {
+        margin: auto;
+    }
+    #modal-delete-wallet .modal-body, #modal-budget-existed .modal-body {
+        padding: .5rem .8rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #modal-add-fam-wallet .modal-title {
+        font-size: 16px;
+    }
+    #modal-add-wallet .modal-body {
+        font-size: 14px;
+    }
+}

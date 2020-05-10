@@ -1,0 +1,278 @@
+:root {
+    --logoHeight: 18vh;
+    --logoFontSize: 64px;
+    --formHeight: calc(100vh - var(--logoHeight));
+    --paddingLogo: calc(var(--logoFontSize) * .625);
+    --captionSize: 18px;
+}
+
+body {
+    background-image: linear-gradient(to bottom, var(--colorMain), #fff);
+    background-repeat: no-repeat;
+}
+
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--logoHeight);
+    margin: var(--paddingLogo) 0;
+}
+
+.logo {
+    height: 100%;
+}
+
+.logo-name {
+    color: #fff;
+    font-size: var(--logoFontSize);
+    font-family: 'DIN Alternate Bold';
+}
+
+.form-wrapper {
+    height: fit-content;
+    min-height: calc(var(--formHeight) - var(--paddingLogo) * 2);
+    position: relative;
+}
+
+.form-wrapper span {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    font-family: 'Gotham Bold';
+    font-size: calc(var(--logoFontSize) * .7);
+    height: fit-content;
+    margin-bottom: 15px;
+}
+
+.form-wrapper>div:not(.btn-wrapper) {
+    font-size: var(--captionSize);
+    text-align: center;
+    height: fit-content;
+}
+
+.form-wrapper a {
+    text-decoration: underline;
+    font-weight: 700;
+    z-index: 99;
+    position: relative;
+    transition: .15s;
+}
+
+.form-wrapper a:hover {
+    color: #fff;
+}
+
+.reg-log-form {
+    height: calc(100% - var(--logoFontSize) * .7 * 1.5 - 15px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+form .center {
+    width: 350px;
+}
+
+form input {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    border: none;
+    border-bottom: solid 2px #444;
+    background: none;
+    outline: none;
+    cursor: text;
+}
+
+form input.password {
+    padding-right: 50px;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    transform: scaleX(0);
+    transition: 0.3s;
+    background-color: #000;
+    transform-origin: left;
+}
+
+.input-focus::after {
+    transform: scaleX(1);
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.toggle-pw {
+    position: absolute;
+    top: 0;
+    height: 40px;
+    right: 0;
+    width: 40px;
+    background: none;
+    border: none;
+}
+
+.toggle-pw i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.2s;
+}
+
+.toggle-pw:hover i {
+    opacity: .5;
+}
+
+.input-error {
+    color: red;
+    font-size: 15px;
+    position: absolute;
+}
+
+.err-link {
+    text-decoration: underline;
+}
+
+.err-link:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+.input-label {
+    font-weight: 900;
+    margin: 30px 10px 0 0;
+    transform: translateY(33px);
+    cursor: text;
+    transition: 0.3s;
+    opacity: 0.5;
+    font-family: 'Gotham Medium';
+}
+
+.label-focus {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.btn-form {
+    padding: 5px 20px;
+    border-radius: 12px;
+    transition: .3s;
+}
+
+.btn-submit {
+    background: none;
+    border: solid 2px var(--colorMain);
+    color: var(--colorMain);
+}
+
+.btn-submit:hover {
+    background-color: var(--colorMain);
+    color: #fff;
+}
+
+.result-wrapper i {
+    font-size: 60px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+
+i#sad {
+    font-size: unset;
+    width: unset;
+    color: unset;
+}
+
+.result-wrapper span {
+    padding: 0 20px;
+}
+
+.result-wrapper>div {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px
+}
+
+.result-success i {
+    color: green;
+}
+
+.result-fail i {
+    color: #f00;
+}
+
+#btn-result {
+    text-decoration: none;
+    border: solid 2px #000;
+    font-size: 28px;
+}
+
+#btn-result:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+@media screen and (max-width: 524px) {
+    :root {
+        --logoHeight: 22vw;
+        --logoFontSize: 12vw;
+        --captionSize: 3.5vw;
+    }
+    form .center {
+        width: 65vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    :root {
+        --captionSize: 4vw;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    form .center {
+        font-size: 16px;
+    }
+    .input-error {
+        font-size: 14px;
+    }
+}
+
+@media (-webkit-device-pixel-ratio: 1.25) {
+    .form-wrapper {
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-height: 860px) {
+    .form-wrapper {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 415px) and (min-height: 800px) {
+    .form-wrapper {
+        margin-bottom: 0;
+    }
+}

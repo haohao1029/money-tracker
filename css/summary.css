@@ -1,0 +1,231 @@
+/* Dropdown Button */
+
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+
+.dropdown-content a:hover {
+  background-color: #ddd
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+
+.show {
+  display: block;
+}
+
+#content {
+  padding: 2vh 0;
+  min-height: calc(100vh - var(--navHeight));
+}
+
+.row {
+  margin: 0;
+}
+
+.row.center {
+  justify-content: center;
+}
+
+.trans-total, .trans-list {
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+  padding: 0;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.trans-total {
+  margin-bottom: 10px;
+}
+
+.col--title {
+  background-color: var(--colorMain);
+  text-align: center;
+  color: #fff;
+  padding: 10px 0;
+  position: relative;
+  font-size: 24px;
+}
+
+.showing-month {
+  font-family: 'Gotham Medium';
+  text-transform: uppercase;
+}
+
+.prev-btn-wrapper, .next-btn-wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 70%;
+  display: flex;
+  align-items: center;
+}
+
+.prev-btn-wrapper {
+  left: 10px;
+}
+
+.next-btn-wrapper {
+  right: 10px;
+}
+
+.prev-month, .next-month, #current-month {
+  background: none;
+  border: none;
+  border-radius: 12px;
+  padding: 0 10px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.prev-month:hover, .next-month:hover, #current-month:hover {
+  background-color: rgba(0, 0, 0, .2);
+}
+
+.next-month:disabled:hover {
+  background: none;
+}
+
+.prev-month:focus, .next-month:focus, #current-month:focus {
+  outline: none;
+}
+
+.next-month:disabled {
+  opacity: 0.5;
+}
+
+.title {
+  text-align: center;
+  justify-content: center;
+}
+
+.error {
+  text-align: center;
+  justify-content: center;
+}
+.chart1 {
+  width: 700px;
+  height: auto;
+  margin: 20px 0 20px 0;
+}
+
+.chart2 {
+  width: 700px;
+  height: auto;
+  margin: 20px 0 20px 0;
+}
+
+.chart3 {
+  width: 700px;
+  height: auto;
+  margin: 20px 0 20px 0;
+}
+
+.chart4 {
+  width: 700px;
+  height: auto;
+  margin: 20px 0 20px 0;
+}
+
+.chart5 {
+  width: 700px;
+  height: auto;
+  margin: 20px 0 20px 0;
+}
+
+.chart6 {
+  width: 700px;
+  height: auto;
+  margin: 20px 0 20px 0;
+}
+
+@media screen and (max-width: 768px) {
+  #content {
+    padding-bottom: 82px;
+  }
+  .col--title {
+    padding: 5px 0;
+    font-size: 20px;
+  }
+  .showing-month {
+    font-size: 16px;
+  }
+  .prev-month, .next-month, #current-month {
+    padding: 0 8px;
+  }
+  .prev-month:hover, .next-month:hover, #current-month:hover {
+    background: none;
+  }
+  .prev-month:active, .next-month:active {
+    background-color: rgba(0, 0, 0, .2);
+  }
+  .trans-total {
+    margin-bottom: 8px;
+  }
+  .trans-list {
+    margin-top: 12px;
+    padding: 0 0 1.5%;
+  }
+  .chart1 {
+    width: 400px;
+    height: auto;
+    margin: 20px 0 20px 0;
+  }
+  .chart2 {
+    width: 400px;
+    height: auto;
+    margin: 20px 0 20px 0;
+  }
+  .chart3 {
+    width: 400px;
+    height: auto;
+    margin: 20px 0 20px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {}
