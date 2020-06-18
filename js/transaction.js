@@ -196,7 +196,10 @@ $(function () {
             validateOrSubmit();
             $('#form-add-trans .form-input').on('change', function () {
                 const checkResult = $('#form-add-trans .form-input').validateEmptyInput();
+                console.log(checkResult)
                 const inputEmpty = $(checkResult).map(function () { return this.toArray() });
+                                console.log(checkResult)
+
                 $('.error').remove();
                 if (checkResult) {
                     inputEmpty.after('<div class="error offset-4">This field is required.</div>');
